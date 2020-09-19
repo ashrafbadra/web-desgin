@@ -16,20 +16,13 @@ $(document).ready(function(){
             $('header').removeClass('sticky');
         }
         
-        if( sc > 1981) {
+        if( sc > 1840) {
             $('.time').countTo(); // Run Count To Plugin
-            $(window).off('scroll');
+			$(window).off('scroll');
+            
         }
         
-        if ( sc > 500) { // Fade The Scroll Top Btn
-            
-            $('.scrollTop').fadeIn();
-            
-        } else {
-            
-            $('.scrollTop').fadeOut();
-            
-        }
+        
         
     });
     
@@ -40,71 +33,21 @@ $(document).ready(function(){
         
         var CSSFilter = $(this).attr('id');
         
-        if( CSSFilter === 'all' ) {
+        if( CSSFilter === "all"){
             $('.Images > div ').fadeIn();
         } else {
             $('.Images > div ').fadeOut();
-            $('.Images').contents().filter('.' + CSSFilter).fadeIn();
-        }
+            $('.Images ').contents().filter('.' + CSSFilter).fadeIn();
+            
+        } 
         
     });
     
-    // owl carousel >> Team Section
-    $('.owl-carousel').owlCarousel({
-        loop:true,
-        margin:10,
-        nav:false,
-        responsive:{
-            0:{
-                items:1
-            },
-            600:{
-                items:3
-            },
-            1000:{
-                items:4
-            }
-        }
-    });
+ 
+    
+ 
+
   
-    
-    // Choose Panel 
-    $('.c_panel li').click(function(){
-        $(this).addClass('active_btn').siblings().removeClass('active_btn');
-        
-        var p = $(this).data('role');
-        $('.content > div ').hide();
-        $('.content').contents().filter('#' + p).fadeIn();
-        
-    });
-    
-    // popup video in choose section
-    $('.pop').magnificPopup({
-        type: 'iframe'
-    });
-    
-    // slick slider on pleasure section
-    $('.slick').slick({
-        nextArrow : false,
-        prevArrow : false
-    });
-    
-    
-    // Scroll to Top
-    $('.scrollTop').click(function(){
-        $('body,html').animate({
-            scrollTop : 0
-        },500);
-    });
-    
-    // smooth Scroll 
-    $('.list a').click(function(){
-        
-        $('body,html').animate({
-            scrollTop : $($(this).attr('href')).offset().top - 80
-        });
-        
-    });
     
    
 });

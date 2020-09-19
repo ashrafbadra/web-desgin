@@ -85,7 +85,7 @@ header nav .nav-list {
     list-style: none;
     margin-bottom: 0;
     display: flex;
-    justify-content: space-around
+    justify-content: space-around;
 }
 
 header nav .nav-list .list a {
@@ -102,17 +102,17 @@ header nav .nav-list .list a:hover {
 }
 
 .sticky {
-    background: #fff;
-    box-shadow: 0 2px 10px 0 #000;
-    color: #000;
+    background: #7cb62f;
+    box-shadow: 0 0 20px 0 ;
+    
 }
 
 .sticky .logo h2 {
-    color: #000
+    color: #000;
 }
 
 .sticky nav .nav-list .list a {
-    color: #000
+   color: #000;
 }
 
 @media (max-width:575px) {
@@ -215,12 +215,6 @@ header nav .nav-list .list a:hover {
     }
 }
 
-@media (min-width:576px) and (max-width:768px) {
-    .about .about-info {
-        text-align: center
-    }
-}
-
 /* Services Section ====================== */
 .services {
     background: #f7f7f7
@@ -232,6 +226,11 @@ header nav .nav-list .list a:hover {
     text-align: center;
     margin-bottom: 20px;
     transition: all 0.3s ease-in-out;
+	
+}
+
+.services .serv:hover{
+	    background: #7cb62f;
 }
 
 .services .serv i.icon {
@@ -251,7 +250,7 @@ header nav .nav-list .list a:hover {
     font-size: 25px;
     color: #777;
     margin-bottom: 20px;
-    transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;	
 }
 
 .services .serv-desc {
@@ -259,67 +258,30 @@ header nav .nav-list .list a:hover {
     color: #888;
     margin-bottom: 20px;
     transition: all 0.3s ease-in-out;
+
 }
 
-.services .serv:hover {
-    background: #7cb62f; 
+
+
+.ltr-effect:hover:after{
+	width: 100%;
+	
 }
+
 
 .services .serv:hover i.icon {
     background: #fff;
     color: #7cb62f;
+	
 }
 
 .services .serv:hover .serv-title ,
 .services .serv:hover .serv-desc {
-    color: #fff
-}
-
-/* Stat Section ===============*/
-.stat {
-    height: 250px;
-    background-image: url(../images/stat/lap-stat.jpg);
-    background-size: cover;
-    background-position: center;
-    position: relative;
-}
-
-.stat .stat-info {
-    margin: 50px 0;
-    text-align: center
-}
-
-.stat .stat-info i , .stat .stat-info span {
-    display: block;
-    margin: auto;
     color: #fff;
-    margin-bottom: 10px
+	
 }
 
-.stat .stat-info i{
-    width: 60px;
-    height: 60px;
-    border-radius: 50%;
-    line-height: 60px;
-    background: #7cb62f;
-    text-align: center;
-    font-size: 20px
-}
 
-.stat .stat-info span.time {
-    font-size: 20px;
-}
-
-.stat .stat-info .stat-info-title {
-    text-transform: capitalize;
-    font-size: 20px
-}
-
-@media (max-width : 991px) {
-    .stat {
-        height: 900px
-    }
-}
 
 /* portfolio ============ */
 .portfolio .buttons {
@@ -338,12 +300,18 @@ header nav .nav-list .list a:hover {
     outline: 0
 }
 
+@media(max-width:575px){
+	.portfolio .buttons button{
+		margin-bottom: 5px;
+	}
+}
+
 .portfolio .Images > div {
     margin-bottom: 20px
 }
 
 .portfolio .Images > div img{
-    width: 100%
+    width: 100%;
 }
 
 .portfolio .more {
@@ -971,7 +939,9 @@ footer img {
 
 .copyright ul {
     display: flex;
-    justify-content: space-between
+    justify-content: space-between;
+  
+    
 }
 
 .copyright ul li {
@@ -991,9 +961,8 @@ footer img {
 
 /* scrolltop ========*/
 .scrollTop {
-    position: fixed;
-    bottom: 10px;
-    right: 10px;
+    position: relative;
+    top: -10px;
     background: #7cb62f;
     color: #fff;
     width: 40px;
@@ -1001,7 +970,7 @@ footer img {
     line-height: 40px;
     text-align: center;
     cursor: pointer;
-    display: none
+    
 }
 
 .active_color {color: #f50 !important}
